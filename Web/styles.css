@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Open-sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.quarters-container {
+    display: flex;
+    flex: 1;
+}
+
+.quarter {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: flex 0.9s ease; /* smooth flex transition on hover */
+    position: relative; /* added position relative for pseudo-element */
+    filter: brightness(0.6); /* initial brightness darker */
+    -webkit-transition: all .4s ease;
+}
+
+.quarter:not(:last-child):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 3px; /* thicker line */
+    background-color: #000000; /* black border color */
+}
+
+.quarter:hover {
+    flex: 1.2; /* widen on hover */
+    filter: brightness(1.1); /* hover brightness brighter */
+    -webkit-transition: all .4s ease;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.quarter h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin: 0;
+    color: white;
+    -webkit-text-stroke: 0.8px black;
+    transition: transform 0.3s ease; /* smooth scale animation on hover */
+    text-shadow: #000;
+    
+}
+
+.quarter:hover h2 {
+    transform: scale(1.2); /* scale up on hover */
+}
+
+#studio {
+    background-image: url('/VenhoodScreens/mic_visual.png'); /* replace 'studio-background.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+}
+
+#music {
+    background-image: url('/VenhoodScreens/audio.jpg'); /* replace 'music-background.jpg' with your image file */
+    background-size: cover;
+    background-position: center;
+}
+
+#crew {
+    background-image: url('/VenhoodScreens/crew.jpg'); /* replace 'crew-background.jpg' with your image file */
+    background-size: cover;
+    background-position: -39em;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    .quarters-container {
+        flex-direction: column; /* Stack quarters vertically on smaller screens */
+    }
+
+    .quarter {
+        flex: 1;
+        margin-bottom: 10px; /* Add some spacing between quarters */
+    }
+
+    .quarter:not(:last-child):before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 3px; /* thicker line */
+        background-color: #000; /* black border color */
+    }
+}
