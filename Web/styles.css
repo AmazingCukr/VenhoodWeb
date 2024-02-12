@@ -6,11 +6,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
+
+
 
 .quarters-container {
     display: flex;
     flex: 1;
+    
 }
 
 .quarter {
@@ -23,8 +27,9 @@ body {
     overflow: hidden;
     transition: flex 0.9s ease; /* smooth flex transition on hover */
     position: relative; /* added position relative for pseudo-element */
-    filter: brightness(0.6); /* initial brightness darker */
+    filter: brightness(0.8); /* initial brightness darker */
     -webkit-transition: all .4s ease;
+    
 }
 
 .quarter:not(:last-child):before {
@@ -45,6 +50,7 @@ body {
 
 a {
     text-decoration: none;
+    filter: brightness(1.0);
     
 }
 
@@ -53,10 +59,12 @@ a {
     text-transform: uppercase;
     letter-spacing: 10px;
     margin: 0;
-    color: white;
-    -webkit-text-stroke: 0.8px black;
+    color: #ffffff;
     transition: transform 0.3s ease; /* smooth scale animation on hover */
-    text-shadow: #000;
+    text-shadow: 3px 3px 20px #000000,
+    -3px 2px 30px #000000;
+    font-weight: 300;
+    
     
 }
 
@@ -65,21 +73,21 @@ a {
 }
 
 #studio {
-    background-image: url('/VenhoodScreens/mic_visual.png'); /* replace 'studio-background.jpg' with your image file */
+    background-image: url('/Web/VenhoodScreens/mic_visual.png'); /* replace 'studio-background.jpg' with your image file */
     background-size: cover;
     background-position: center;
 }
 
 #music {
-    background-image: url('/VenhoodScreens/audio.jpg'); /* replace 'music-background.jpg' with your image file */
+    background-image: url('/Web/VenhoodScreens/Audio-web.png'); /* replace 'music-background.jpg' with your image file */
     background-size: cover;
     background-position: center;
 }
 
 #crew {
-    background-image: url('/VenhoodScreens/crew.jpg'); /* replace 'crew-background.jpg' with your image file */
+    background-image: url('/Web/VenhoodScreens/Crew-web.png'); /* replace 'crew-background.jpg' with your image file */
     background-size: cover;
-    background-position: -39em;
+    background-position: center;
 }
 
 /* Media Queries for Responsive Design */
